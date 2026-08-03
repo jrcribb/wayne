@@ -121,7 +121,12 @@ export class HTTPResponse {
             const type = _res.headers.get('Content-Type') ?? 'application/octet-stream';
             this.send(await _res.arrayBuffer(), { type });
         } else if (arg instanceof Request) {
-            return fetch(arg).then(this._resolve).catch(this._reject);
+            try {
+                const _res = await fetch(arg);
+                this._resolve(_res);
+            } catch (e) {
+                this.html(...error_500(e));
+            }
         }
     }
     download(content, { filename = 'download', type = 'text/plain', ...init } = {}) {
@@ -325,7 +330,7 @@ function error_500(error) {
     ]);
     return [output, {
         status: 500,
-        statusText: '500 Server Error'
+        statusText: 'Server Error'
     }];
 }
 
@@ -352,7 +357,7 @@ function error_404(path) {
     ]);
     return [output, {
         status: 404,
-        statusText: '404 Page Not Found'
+        statusText: 'Page Not Found'
     }];
 }
 

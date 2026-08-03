@@ -1,3 +1,7 @@
+## 0.20.1
+### Bug fix
+* fix error from `Response::fetch(Request)` when request is blocked by AdBlocker
+
 ## 0.20.0
 ### Feature
 * add `Wayne::force()` to handle service worker waiting
