@@ -1,4 +1,4 @@
-VERSION=0.20.0
+VERSION=0.20.1
 DATE=`date -uR`
 YEAR=`date +%Y`
 
