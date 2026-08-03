@@ -1,5 +1,5 @@
 /*
- * Wayne - Server Worker Routing library (v. 0.20.1)
+ * Wayne - Server Worker Routing library (v. 0.20.2)
  *
  * Copyright (c) 2022-2026 Jakub T. Jankiewicz <https://jcubic.pl/me>
  * Released under MIT license
