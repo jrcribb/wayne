@@ -185,7 +185,7 @@ self.addEventListener('install', (event) => {
 ```
 
 > [!NOTE]
-> In version 0.20.0 you can use `app.force();` to run both.
+> In version 0.20.0 you can use `wayne.force();` to run both.
 
 ### Handle the same extension for all requests
 
